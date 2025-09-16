@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: white;
+  color: black;
+  line-height: 1.6;
+  font-size: large;
+}
+
+
+.site-header {
+  background: #d63384 ;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.brand span {
+  color:rgb(101, 101, 221) ;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  background: #ffe6f2;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+  margin-right: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  color: rgb(86, 86, 180);
+  margin-bottom: 1rem;
+  animation: hero-anime;
+  animation-duration: 5s;
+  animation-timing-function: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes hero-anime {
+  from{
+    margin-left: 20px;
+  }
+  to{margin-right: 5px;}
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-media {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-media img {
+  max-width: 320px;
+  border-radius: 12px;
+}
+
+.btn {
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn.primary {
+  background: #d63384;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #b52d6a;
+}
+
+.btn.ghost {
+  border: 2px solid #d63384;
+  color: black;
+}
+
+.btn.ghost:hover {
+  background: #d63384;
+  color: #fff;
+}
+section{
+  margin-bottom:100px;
+}
+
+
+.section h2 {
+  font-size: 1.8rem;
+  color: rgb(101, 101, 221);
+  margin-bottom: 1.5rem;
+  border-left: 5px solid pink;
+  padding-left: 0.8rem;
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 1rem;
+  font-size: large;
+  text-align: center;
+}
+
+.pill-row {
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.pill {
+  background: rgb(202, 202, 226);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+}
+
+.projects-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.project-card {
+  flex: 1 1 300px;
+  background: #fff0f6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 1rem;
+}
+
+.project-body h3 {
+  margin-bottom: 0.5rem;
+  color: #d63384;
+}
+
+.project-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.achievements {
+  list-style: none;
+}
+
+.achievements li {
+  background: #fff0f6;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 1.5rem;
+}
+
+.blog-card {
+  display: flex;
+  gap: 1rem;
+  background: #fff0f6;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.blog-card img {
+  width: 120px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-card h3 {
+  color: #d63384;
+  margin-bottom: 0.5rem;
+}
+
+.traits {
+  list-style:decimal;
+  background-color: #ffe6f2;
+ 
+}
+
+.traits li {
+  margin-bottom: 0.6rem;
+  padding: 0.7rem;
+  text-align: center;
+  border-radius: 6px;
+  
+  
+}
+
+#contact {
+  text-align: center;
+}
+
+.contact-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-footer {
+  background:  #d63384;
+  text-align: center;
+  padding: 1rem;
+  color: black;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: left;
+  }
+  .hero-text {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: pink;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
